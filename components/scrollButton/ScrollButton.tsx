@@ -21,12 +21,12 @@ const scrollToTop = () =>{
 	/* you can also use 'auto' behaviour
 		in place of 'smooth' */
 	});
+	window.addEventListener('scroll', toggleVisible);
 };
 
-window.addEventListener('scroll', toggleVisible);
 
 return (
-	<button className='z-100 bg-[#47352B]' onClick={scrollToTop}
+	<button className='z-100 bg-[#47352B] fixed bottom-20 right-20' onClick={scrollToTop}
 	style={{display: visible ? 'inline' : 'none'}} >
 	<img src='/assets/images/svg/arrowUp.svg' alt='' />
 	</button>
